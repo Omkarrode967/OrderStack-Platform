@@ -138,7 +138,7 @@ Below are some key screenshots showcasing the OrderStack platform in action:
 ![Login](assets/Login.png)
 
 ### Manage Users
-![Manage Users](assets/Manage%20Users.png)
+![Manage Users](assets/ManageUsers.png)
 
 ### Product View
 ![Product](assets/Product.png)
