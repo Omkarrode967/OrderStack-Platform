@@ -114,12 +114,11 @@ To run this project, you will need to add the following environment variables to
 ## ⚙️ Installation & Deployment
 
 ### 1. Clone the Repository
+
 ```bash
-git clone [https://github.com/Omkarrode967/OrderStack-Platform.git](https://github.com/Omkarrode967/OrderStack-Platform.git)
+git clone https://github.com/Omkarrode967/OrderStack-Platform.git
 cd OrderStack-Platform
-
-
----
+```
 
 ## 📸 Project Visuals
 
