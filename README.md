@@ -117,3 +117,40 @@ To run this project, you will need to add the following environment variables to
 ```bash
 git clone [https://github.com/Omkarrode967/OrderStack-Platform.git](https://github.com/Omkarrode967/OrderStack-Platform.git)
 cd OrderStack-Platform
+
+
+---
+
+## 📸 Project Visuals
+
+Below are some key screenshots showcasing the OrderStack platform in action:
+
+### Home Page
+![Home Page Visual](assets/Home.png)
+
+### Admin Portal
+![Admin Portal](assets/Admin.png)
+
+### Shopping Cart
+![Cart](assets/Cart.png)
+
+### Login Page
+![Login](assets/Login.png)
+
+### Manage Users
+![Manage Users](assets/Manage%20Users.png)
+
+### Product View
+![Product](assets/Product.png)
+
+### User Profile
+![Profile](assets/Profile.png)
+
+### Validation Aspect Logs
+![ValidationAspect](assets/ValidationAspect.png)
+
+### Logging Aspect Logs
+![LoggingAspect](assets/LoggingAspect.png)
+
+
+
