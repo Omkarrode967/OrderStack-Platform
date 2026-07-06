@@ -26,7 +26,7 @@ public class SecurityConfig {
         http.cors(cors -> cors.configurationSource(request -> {
             CorsConfiguration config = new CorsConfiguration();
             // ADD YOUR VERCEL URL HERE (Keep localhost if you still want to test locally)
-            config.setAllowedOrigins(List.of("http://localhost:5173", "https://PUT_YOUR_VERCEL_URL_HERE.vercel.app"));
+            config.setAllowedOrigins(List.of("http://localhost:5173", "https://order-stack-platform-brown.vercel.app/"));
             config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
             config.setAllowedHeaders(List.of("*"));
             config.setAllowCredentials(true);
@@ -43,8 +43,7 @@ public class SecurityConfig {
 
         // 3. The Magic OAuth2 Config
         http.oauth2Login(oauth2 -> oauth2
-                // CHANGE THIS TO YOUR VERCEL URL!
-                .defaultSuccessUrl("https://PUT_YOUR_VERCEL_URL_HERE.vercel.app/", true)
+                .defaultSuccessUrl("https://order-stack-platform-brown.vercel.app/", true)
         );
 
         return http.build();
