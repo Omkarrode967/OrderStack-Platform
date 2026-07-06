@@ -22,10 +22,11 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
-        // 1. Allow React to talk to Spring Boot
+        // 1. Allow React (Vercel) to talk to Spring Boot
         http.cors(cors -> cors.configurationSource(request -> {
             CorsConfiguration config = new CorsConfiguration();
-            config.setAllowedOrigins(List.of("http://localhost:5173"));
+            // ADD YOUR VERCEL URL HERE (Keep localhost if you still want to test locally)
+            config.setAllowedOrigins(List.of("http://localhost:5173", "https://PUT_YOUR_VERCEL_URL_HERE.vercel.app"));
             config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
             config.setAllowedHeaders(List.of("*"));
             config.setAllowCredentials(true);
@@ -36,20 +37,16 @@ public class SecurityConfig {
 
         // 2. Secure your routes
         http.authorizeHttpRequests(auth -> auth
-                // ADDED "/api/orders/**" TO THE PERMIT ALL LIST
                 .requestMatchers("/api/register", "/api/login", "/api/auth/**", "/error", "/api/products/**", "/api/product/**", "/api/users", "/api/users/**", "/api/orders/**").permitAll()
                 .anyRequest().authenticated()
         );
 
         // 3. The Magic OAuth2 Config
         http.oauth2Login(oauth2 -> oauth2
-                // When Google says "Yes, this is Omkar", redirect back to your React homepage!
-                .defaultSuccessUrl("http://localhost:5173/", true)
+                // CHANGE THIS TO YOUR VERCEL URL!
+                .defaultSuccessUrl("https://PUT_YOUR_VERCEL_URL_HERE.vercel.app/", true)
         );
-
-
 
         return http.build();
     }
 }
-
